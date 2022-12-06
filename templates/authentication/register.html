@@ -1,10 +1,40 @@
 {% extends 'base_auth.html' %}
-
+{% load static %}
 {% block content %}
 
-<div class="card">
-    <div class="card-body">
-        <h1>Login</h1>
+
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 ">
+        <div class="card p-2 mt-5">
+            
+            <div class="card-body">
+                <div class="card-title">
+                <h4>Register for a free account</h4>
+            </div>
+                <form action="" method="post">
+                    <div class="form-group p-1">
+                        <input type="userName" name="userName" placeholder="User Name" class="form-control form-control-sm" id="userNameField" />
+                    </div>
+                    <div class="form-group p-1">
+                        <input type="email" name="email" class="form-control form-control-sm" id="emailField" placeholder="Email" />
+                    </div>
+                    <div class="form-group p-1">
+                        <input type="password" name="password" class="form-control form-control-sm" id="passwordField" placeholder="Password" />
+                        <div class="py-4 px-2"><small class="float-sm-end">SHOW</small></div>
+                        
+                    </div>
+                    
+                    <div class="d-grid gap-2 ">
+                        <input type="submit" value="Register" class="btn btn-primary align-content-sm-center" />
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
+    <div class="col-md-4"></div>
 </div>
+<script src="{% static 'js/register.js' %}"></script>
+
 {% endblock %}
